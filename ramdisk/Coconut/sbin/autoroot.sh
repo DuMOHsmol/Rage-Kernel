@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-# DooMLoRD: autoroot script (v11)
+# DooMLoRD: autoroot script (v12)
 
 # [START] setting up
 echo "[START] remounting system" > /data/local/tmp/autorootlog.txt
@@ -38,9 +38,13 @@ then
 	if /sbin/busybox [ ! -f /system/xbin/busybox ]; 
 	then	
 		echo "[busybox binary] not found in /system/xbin/busybox " >> /data/local/tmp/autorootlog.txt
-		/sbin/busybox cp /res/autoroot/busybox /system/xbin/busybox
-		/sbin/busybox chown root.root /system/xbin/busybox
-		/sbin/busybox chmod 4777 /system/xbin/busybox
+		if /sbin/busybox [ ! -f /system/bin/busybox ]; 
+		then	
+			echo "[busybox binary] not found in /system/bin/busybox " >> /data/local/tmp/autorootlog.txt
+			/sbin/busybox cp /res/autoroot/busybox /system/xbin/busybox
+			/sbin/busybox chown root.root /system/xbin/busybox
+			/sbin/busybox chmod 4777 /system/xbin/busybox
+		fi
 	fi
 
 	# [DONE] placing flag

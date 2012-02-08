@@ -1,3 +1,3 @@
 git add ./*
-git commit -m 'Ver 2.3. Reverted back to source from 58 firmware. Updated version number in ramdisks to 62. Reverted old frequency table with small fix. Enabled usb-storage, so you dont need usb-storage.ko now. Enabled ntfs support. Salvaged some ram. Now version number shows actual version of kernel (#23=2.3).'
+git commit -m 'Ver 2.4, now phone lights up blue led to show when you can enter recovery (thx to DooMLoRD & Bin4ry). Minor changes in ramdisks. Enabled hid drivers for microsoft and a4tech.'
 git push -u origin master

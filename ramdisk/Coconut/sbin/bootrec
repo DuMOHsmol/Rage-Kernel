@@ -1,7 +1,18 @@
 #!/sbin/sh
 
+# trigger blue LED
+echo '255' > /sys/class/leds/blue/brightness
+echo '0' > /sys/class/leds/red/brightness
+echo '0' > /sys/class/leds/green/brightness
+
 cat /dev/input/event2 > /dev/keycheck&
 sleep 3
+
+# trigger blue LED
+echo '0' > /sys/class/leds/blue/brightness
+echo '0' > /sys/class/leds/red/brightness
+echo '0' > /sys/class/leds/green/brightness
+
 kill -9 $!
 if [ -s /dev/keycheck -o -e /cache/recovery/boot ]
 then
@@ -26,8 +37,6 @@ mount /dev/block/mmcblk0p1 /sdcard
 /sbin/recovery &
 /sbin/adbd recovery 
 fi
-
-/system/bin/chargemon
 
 #continue booting
 
