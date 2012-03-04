@@ -1,3 +1,3 @@
 git add ./*
-git commit -m 'Ver 2.4, now phone lights up blue led to show when you can enter recovery (thx to DooMLoRD & Bin4ry). Minor changes in ramdisks. Enabled hid drivers for microsoft and a4tech.'
+git commit -m 'Ver 2.5, added zram and cleancache drivers, eabled CIFS and EXT4, added lulzactive governor, root fs mounts as rw after boot.'
 git push -u origin master

@@ -98,7 +98,7 @@ loglevel 3
     write /dev/cpuctl/bg_non_interactive/cpu.shares 52
 
 on early-fs
-    mount rootfs rootfs / ro remount
+    mount rootfs rootfs / rw remount
 
 on fs
 # mount mtd partitions
@@ -110,7 +110,7 @@ on fs
     
 on post-fs
     # once everything is setup, no need to modify /
-    mount rootfs rootfs / ro remount
+    mount rootfs rootfs / rw remount
 
     # We chown/chmod /data again so because mount is run as root + defaults
     chown system system /data
