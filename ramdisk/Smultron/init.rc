@@ -204,8 +204,8 @@ on boot
     domainname localdomain
    
 # cpufreq defaults
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1024000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 245000
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1017600
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 249600
 
 # set RLIMIT_NICE to allow priorities from 19 to -20
     setrlimit 13 40 40
