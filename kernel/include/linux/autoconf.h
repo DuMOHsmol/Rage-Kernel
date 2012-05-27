@@ -1,7 +1,7 @@
 /*
  * Automatically generated C config: don't edit
  * Linux kernel version: 2.6.32.9
- * Sun May 27 23:11:39 2012
+ * Sun May 27 23:57:56 2012
  */
 #define AUTOCONF_INCLUDED
 #define CONFIG_VIDEO_V4L1_COMPAT 1
@@ -745,7 +745,6 @@
 #define CONFIG_NF_NAT_NEEDED 1
 #define CONFIG_HAS_EARLYSUSPEND 1
 #define CONFIG_FS_MBCACHE 1
-#define CONFIG_CPU_FREQ_GOV_POWERSAVE 1
 #define CONFIG_SND_MSM_MVS7x30_SOC 1
 #define CONFIG_CPU_FREQ_VDD_LEVELS 1
 #define CONFIG_HAVE_MEMORY_PRESENT 1
