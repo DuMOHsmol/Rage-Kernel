@@ -59,8 +59,8 @@ static unsigned int enabled = 0;
 #define DEFAULT_MIN_SAMPLE_TIME 50000;
 static unsigned long min_sample_time;
 
-#define FREQ_THRESHOLD 1024000;
-#define RESUME_SPEED 1024000;
+#define FREQ_THRESHOLD 1017600;
+#define RESUME_SPEED 1017600;
 
 static int cpufreq_governor_interactivex(struct cpufreq_policy *policy,
 		unsigned int event);
