@@ -298,10 +298,10 @@ on boot
     setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
     setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
 
-#boof: launching autoroot
+#DuMOHsmol: launching autoroot
     start autoroot
 
-#boof: init.d scripts support 
+#DuMOHsmol: init.d scripts support 
     start sysinitsupport
     on property:cm.filesystem.ready=1
 
@@ -310,22 +310,13 @@ on boot
 ## Daemon processes to be run by init.
 ##
 
-# boof: autoroot service
-service autoroot /sbin/autoroot.sh
-    user root
-    oneshot
-    disabled
-# boof: autoroot service
+# DuMOHsmol: autoroot service
 service autoroot /sbin/autoroot.sh
     user root
     oneshot
     disabled
 
-#boof: new init.d scripts support 
-service sysinitsupport /sbin/sysinitsupport.sh
-    disabled
-    oneshot
-#boof: new init.d scripts support 
+#DuMOHsmol: new init.d scripts support 
 service sysinitsupport /sbin/sysinitsupport.sh
     disabled
     oneshot

@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-# DooMLoRD: autoroot script (v12)
+# DooMLoRD: autoroot script (v13)
 
 # [START] setting up
 echo "[START] remounting system" > /data/local/tmp/autorootlog.txt
@@ -23,7 +23,7 @@ then
 	/sbin/busybox rm /system/xbin/su
 	/sbin/busybox cp /res/autoroot/su /system/xbin/su
 	/sbin/busybox chown root.root /system/xbin/su
-	/sbin/busybox chmod 4755 /system/xbin/su
+	/sbin/busybox chmod 06755 /system/xbin/su
 
 	# [Superuser app] remove existing occurances and push app
 	echo "[Superuser app] remove existing occurances and push app" >> /data/local/tmp/autorootlog.txt
@@ -44,6 +44,7 @@ then
 			/sbin/busybox cp /res/autoroot/busybox /system/xbin/busybox
 			/sbin/busybox chown root.root /system/xbin/busybox
 			/sbin/busybox chmod 4777 /system/xbin/busybox
+			/system/xbin/busybox --install -s /system/xbin/
 		fi
 	fi
 
