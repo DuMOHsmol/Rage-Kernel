@@ -22,8 +22,11 @@ on early-boot
     exec /system/bin/sh /system/etc/pre_hw_config.sh
     # Start the offline charging (This blocks booting further in some cases)
     exec /system/bin/chargemon
-     # Boot into recovery
+    # Boot into recovery
     exec /sbin/bootrec
+
+    
+    
     
     
 
@@ -197,6 +200,11 @@ on boot
     # Create the directories and files expected by the lcatp service
     # only found in eng builds
     
+
+    
+
+    # Disable C_A_D
+    exec system/bin/ctrlaltdel soft
 
 
 

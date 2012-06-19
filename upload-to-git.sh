@@ -1,3 +1,3 @@
 git add ./*
-git commit -m 'Ver 3.0, updated zram driver, added fugeswap, re-enabled powersave and performance governors, ramdisk fixes.'
+git commit -m 'Ver 3.0, fixed xperia mini''s ramdisk.'
 git push -u origin master
